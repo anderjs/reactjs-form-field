@@ -7,7 +7,10 @@ class Examples extends Component {
     fadeIn: false,
     list: [...API]
   }
-
+  
+  /**
+   * @function toggle Will fadeIn/FadeOut the examples.
+   */
   toggle = () => {
     this.setState(prevState => ({
       fadeIn: !prevState.fadeIn

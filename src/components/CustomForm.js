@@ -59,7 +59,10 @@ class CustomForm extends Component {
     });
   }
 
-
+  /**
+   * @function handleUnselectItem will discard the select field and makes
+   * Available to search again.
+   */
   handleUnselectItem = () => {
     this.setState({
       selected: false,
