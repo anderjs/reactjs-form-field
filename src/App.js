@@ -1,28 +1,36 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import { Container, Col, Row } from 'reactstrap';
+// Importing Components
+import Navigation from './components/Navigation';
+import CustomForm from './components/CustomForm';
 import './App.css';
+import './bootstrap-4.2.1/dist/css/bootstrap.css';
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
+      <React.Fragment>
+        <Navigation />
+        <Container>
+          <h4 className={classes.h4}>React JS Form</h4>
+          <Row>
+            <Col md={6}>
+              <CustomForm />
+            </Col>
+          </Row>
+        </Container>
+      </React.Fragment>
     );
   }
 }
+
+/**
+ * @typedef {object} classes
+ * @description Each member of classes, will add a custom css of bootstrap.
+ * This will give more readibility of code instead of confusing css classNames.
+ */
+const classes = {
+  h4: 'mt-4 highlight'
+};
 
 export default App;

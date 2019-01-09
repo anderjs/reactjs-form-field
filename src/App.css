@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Thasadith');
+
 .App {
   text-align: center;
 }
@@ -29,4 +31,30 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.highlight {
+  font-family: 'Thasadith', sans-serif !important;
+}
+
+.query:hover {
+  color: #1565c0 !important;
+  transition: 0.3s;
+}
+
+.remove {
+  position: relative;
+  height: 10px;
+  top: -33px;
+  left: 510px;
+}
+
+.remove:hover {
+  position: relative;
+  height: 10px;
+  top: -33px;
+  left: 510px;
+  transition: 0.2s;
+  color: #d50000 !important;
+  cursor: pointer;
 }
