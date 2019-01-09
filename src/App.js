@@ -13,7 +13,9 @@ class App extends Component {
       <React.Fragment>
         <Navigation />
         <Container>
-          <h4 className={classes.h4}>React JS Form</h4>
+          <h4 className={classes.h4}>React JS Form{" "} 
+            <span className="text-info">Select/Discard</span>
+          </h4>
           <Row>
             <Col md={6}>
               <CustomForm />
