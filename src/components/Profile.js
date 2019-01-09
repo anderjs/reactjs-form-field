@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card, CardTitle, CardText, CardSubtitle } from 'reactstrap';
+import { Card, CardTitle, CardText } from 'reactstrap';
 
 /**
  * @typedef {React.SFC} Profile

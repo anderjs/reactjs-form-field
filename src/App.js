@@ -3,6 +3,7 @@ import { Container, Col, Row } from 'reactstrap';
 // Importing Components
 import Navigation from './components/Navigation';
 import CustomForm from './components/CustomForm';
+import Examples from './components/Examples';
 import './App.css';
 import './bootstrap-4.2.1/dist/css/bootstrap.css';
 
@@ -16,6 +17,9 @@ class App extends Component {
           <Row>
             <Col md={6}>
               <CustomForm />
+            </Col>
+            <Col md={6}>
+              <Examples />
             </Col>
           </Row>
         </Container>
