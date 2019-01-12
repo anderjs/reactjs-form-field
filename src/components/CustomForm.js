@@ -9,7 +9,7 @@ import Profile from '../components/Profile';
 class CustomForm extends Component {
   state = {
     list: API,
-    search: null,
+    search: '',
     results: [],
     selected: false,
     person: null,
@@ -33,7 +33,7 @@ class CustomForm extends Component {
    */
   handleResults = (query) => {
     const { list } = this.state;
-    const filteredResults = list.filter((item, index) => 
+    const filteredResults = list.filter((item) => 
       item.name.includes(query)
     );
     this.setState({
@@ -50,11 +50,11 @@ class CustomForm extends Component {
    * @example 'John Smith', 'Front End Developer', ['Angular', 'Vue']
    */
   handleSelectItem = (item) => {
-    const { name: selectedItem } = item;
+    const { name } = item;
     const {...data} = item;
     this.setState({
       selected: true,
-      search: selectedItem,
+      search: name,
       person: data
     });
   }
@@ -62,10 +62,11 @@ class CustomForm extends Component {
   /**
    * @function handleUnselectItem will discard the select field and makes
    * Available to search again.
-   */
+   */ 
   handleUnselectItem = () => {
     this.setState({
       selected: false,
+      search: ''
     })
   }
 
@@ -76,7 +77,7 @@ class CustomForm extends Component {
     return (
       <Form>
         <CustomInput
-          name="user-search" 
+          name="search" 
           onChange={this.handleChange}
           value={search}
           disabled={selected}

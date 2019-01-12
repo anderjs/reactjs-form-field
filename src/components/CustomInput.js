@@ -15,23 +15,10 @@ const CustomInput = (
     disabled = false, 
     onChange = null,
     className = 'form-control',
-    name = null,
-    value = null,
+    name = '',
+    value = '',
     placeholder = 'Example: John Doe, John Smith...'
   }) => {
-    if(value !== null) {
-      return (
-        <input 
-          type={type}
-          disabled={disabled}
-          onChange={onChange}
-          className={className}
-          name={name}
-          value={value}
-          placeholder={placeholder}
-          />
-        );
-    }
     return (
       <input 
         type={type}
@@ -40,6 +27,7 @@ const CustomInput = (
         className={className}
         name={name}
         placeholder={placeholder}
+        value={value}
         />
     );
 }
